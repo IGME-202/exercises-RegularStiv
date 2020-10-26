@@ -23,13 +23,14 @@ public class Movement1 : MonoBehaviour
     {
         //sets camera size to camera edges
         cameraSize = new Vector2(Camera.main.orthographicSize, Camera.main.orthographicSize * Camera.main.aspect);
-        vehiclePosition = new Vector3(Random.Range(-cameraSize.x,cameraSize.x), Random.Range(-cameraSize.y + 2,cameraSize.y - 2), 1);
+        vehiclePosition = new Vector3(Random.Range(-cameraSize.x + 2,cameraSize.x - 2), Random.Range(-cameraSize.y + 4 ,cameraSize.y - 4), 0);
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        //calls all methods and zeros acceleration
         acceleration = Vector3.zero;
         if (velocity.sqrMagnitude > 0 && friction)
         {
@@ -37,13 +38,8 @@ public class Movement1 : MonoBehaviour
         }
         ApplyMouseForce();
         TurnVehicle();
-        UpdateVehicle();
         Bounce();
-        // Add acceleration to velocity
-        // Draw the vehicle at that position
-        
-        //wraps 
-        //Wrap();
+        UpdateVehicle();
 
         transform.position = vehiclePosition;
         // Set the vehicle’s rotation to match the direction
@@ -54,6 +50,7 @@ public class Movement1 : MonoBehaviour
             friction = !friction;
         }
     }
+    // updates the vehicle's loaction 
     void UpdateVehicle()
     {
         if (Input.GetKey(KeyCode.UpArrow))
@@ -71,6 +68,7 @@ public class Movement1 : MonoBehaviour
         velocity += acceleration * Time.deltaTime;
         vehiclePosition += velocity * Time.deltaTime;
     }
+    // applies friction 
     void ApplyFriction(float coeff)
     {
         Vector3 friction = velocity * -1;
@@ -79,6 +77,7 @@ public class Movement1 : MonoBehaviour
         ApplyForce(friction);
     }
 
+    //takes the mouse location and the location of the monsters and applies a force based on that
     void ApplyMouseForce()
     {
         if (Input.GetMouseButton(0))
@@ -108,6 +107,8 @@ public class Movement1 : MonoBehaviour
     {
         acceleration += force / mass;
     }
+
+    //makes the objects bounce off of the sides of the screen 
     void Bounce()
     {
         if (vehiclePosition.x > cameraSize.x)
@@ -118,11 +119,11 @@ public class Movement1 : MonoBehaviour
         {
             velocity.x = -velocity.x;
         }
-        if (vehiclePosition.y > cameraSize.y / 2)
+        if (vehiclePosition.y > cameraSize.y - 3)
         {
             velocity.y = -velocity.y;
         }
-        else if (vehiclePosition.y < -cameraSize.y / 2)
+        else if (vehiclePosition.y < -cameraSize.y + 3)
         {
             velocity.y = -velocity.y;
         }
