@@ -110,19 +110,19 @@ public class Movement1 : MonoBehaviour
     }
     void Bounce()
     {
-        if (vehiclePosition.x > cameraSize.x + 1.5f)
+        if (vehiclePosition.x > cameraSize.x)
         {
             velocity.x = -velocity.x;
         }
-        else if (vehiclePosition.x < -cameraSize.x - 1.5f)
+        else if (vehiclePosition.x < -cameraSize.x)
         {
             velocity.x = -velocity.x;
         }
-        if (vehiclePosition.y > cameraSize.y - 2)
+        if (vehiclePosition.y > cameraSize.y / 2)
         {
             velocity.y = -velocity.y;
         }
-        else if (vehiclePosition.y < -cameraSize.y + 2 )
+        else if (vehiclePosition.y < -cameraSize.y / 2)
         {
             velocity.y = -velocity.y;
         }
