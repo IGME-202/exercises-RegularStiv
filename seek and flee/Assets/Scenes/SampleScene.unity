@@ -519,12 +519,12 @@ PrefabInstance:
     - target: {fileID: 310122049302445009, guid: 089cf72374ed68f4f950a580672fb9ed,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.3
+      value: 2.8
       objectReference: {fileID: 0}
     - target: {fileID: 310122049302445009, guid: 089cf72374ed68f4f950a580672fb9ed,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 310122049302445009, guid: 089cf72374ed68f4f950a580672fb9ed,
         type: 3}
@@ -574,17 +574,17 @@ PrefabInstance:
     - target: {fileID: 310122049302445009, guid: 089cf72374ed68f4f950a580672fb9ed,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 310122049302445009, guid: 089cf72374ed68f4f950a580672fb9ed,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 310122049302445009, guid: 089cf72374ed68f4f950a580672fb9ed,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4881305589254211718, guid: 089cf72374ed68f4f950a580672fb9ed,
         type: 3}
@@ -594,17 +594,17 @@ PrefabInstance:
     - target: {fileID: 7523272638457049554, guid: 089cf72374ed68f4f950a580672fb9ed,
         type: 3}
       propertyPath: m_Size.x
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7523272638457049554, guid: 089cf72374ed68f4f950a580672fb9ed,
         type: 3}
       propertyPath: m_Size.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7523272638457049554, guid: 089cf72374ed68f4f950a580672fb9ed,
         type: 3}
       propertyPath: m_Size.z
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 089cf72374ed68f4f950a580672fb9ed, type: 3}

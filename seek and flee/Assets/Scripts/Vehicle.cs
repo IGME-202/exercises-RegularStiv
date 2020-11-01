@@ -54,6 +54,8 @@ public abstract class Vehicle : MonoBehaviour
 
         Vector3 seekingForce = desiredVelocity - velocity;
 
+        seekingForce.y = 0;
+
         return seekingForce;
     }
 
@@ -69,6 +71,8 @@ public abstract class Vehicle : MonoBehaviour
         desiredVelocity = desiredVelocity.normalized * maxSpeed;
 
         Vector3 fleeingForce = desiredVelocity - velocity;
+
+        fleeingForce.y = 0;
 
         return fleeingForce;
     }
